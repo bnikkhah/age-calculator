@@ -1,2 +1,18 @@
 @import './node_modules/bootstrap/scss/bootstrap.scss';
 
+/*
+- Mobile: 375px
+- Desktop: 1440px
+*/
+
+$primary: hsl(259, 100%, 65%);
+$secondary: hsl(0, 100%, 67%);
+$light: hsl(0, 0%, 94%);
+$dark: hsl(0, 0%, 8%);
+$muted: hsl(0, 0%, 86%);
+$grey: hsl(0, 1%, 44%);
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+}

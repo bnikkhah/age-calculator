@@ -5,10 +5,101 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
   </head>
   <body>
-    <main x-data="{ text: 'hello world' }">
-      <p x-text="text"></p>
+    <main
+      class="calculator-main"
+      role="main"
+      x-data="data"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            
+            <form
+              class="inputs"
+              @submit.prevent="handleSubmit"
+            >
+
+              <div class="row">
+
+                <div class="col">
+                  <label
+                    for="day"
+                    class="form-label"
+                  >
+                    Day
+                  </label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="day"
+                    placeholder="DD"
+                    min="1"
+                    max="31"
+                    name="day"
+                  >
+                </div>
+
+                <div class="col">
+                  <label
+                    for="month"
+                    class="form-label"
+                  >
+                    Month
+                  </label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="month"
+                    placeholder="MM"
+                    min="1"
+                    max="12"
+                    name="month"
+                  >
+                </div>
+
+                <div class="col">
+                  <label
+                    for="year"
+                    class="form-label"
+                  >
+                    Year
+                  </label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="year"
+                    placeholder="YYYY"
+                    min="1900"
+                    name="year"
+                  >
+                </div>
+
+                <div class="col">
+                  <button type="submit">Submit</button>
+                </div>
+
+              </div>
+
+            </form>
+
+            <section class="results">
+
+              <ul class="list-unstyled">
+                <li><span id="years">--</span> years</li>
+                <li><span id="months">--</span> months</li>
+                <li><span id="days">--</span> days</li>
+              </ul>
+
+            </section>
+
+          </div>
+        </div>
+      </div>
     </main>
     <script type="module" src="/main.js"></script>
   </body>

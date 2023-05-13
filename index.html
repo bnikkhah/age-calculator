@@ -41,6 +41,7 @@
                     min="1"
                     max="31"
                     name="day"
+                    x-model="day"
                   >
                 </div>
 
@@ -59,6 +60,7 @@
                     min="1"
                     max="12"
                     name="month"
+                    x-model="month"
                   >
                 </div>
 
@@ -76,6 +78,7 @@
                     placeholder="YYYY"
                     min="1900"
                     name="year"
+                    x-model="year"
                   >
                 </div>
 
@@ -90,9 +93,30 @@
             <section class="results">
 
               <ul class="list-unstyled">
-                <li><span id="years">--</span> years</li>
-                <li><span id="months">--</span> months</li>
-                <li><span id="days">--</span> days</li>
+                <li>
+                  <span
+                    id="years"
+                    x-text="calculatedYears"
+                  >
+                  --
+                  </span> years
+                </li>
+                <li>
+                  <span=
+                    id="months"
+                    x-text="calculatedMonths"
+                  >
+                  --
+                  </span=> months
+                </li>
+                <li>
+                  <span
+                    id="days"
+                    x-text="calculatedDays"
+                  >
+                  --
+                  </span> days
+                </li>
               </ul>
 
             </section>

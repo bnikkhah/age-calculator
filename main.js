@@ -8,9 +8,9 @@ document.addEventListener("alpine:init", () => {
     day: "",
     month: "",
     year: "",
-    calculatedDays: "--",
-    calculatedMonths: "--",
-    calculatedYears: "--",
+    calculatedDays: "- -",
+    calculatedMonths: "- -",
+    calculatedYears: "- -",
     handleSubmit(e) {
       const duration = moment.duration(
         moment().diff(`${this.year}-${this.month}-${this.day}`)

@@ -24,7 +24,7 @@
               @submit.prevent="handleSubmit"
             >
 
-              <div class="row">
+              <div class="row fields-row mb-4">
 
                 <div class="col">
                   <label
@@ -81,21 +81,23 @@
                     x-model="year"
                   >
                 </div>
+              </div>
 
-                <div class="col-12">
+              <div class="row">
+                <div class="col-12 submit-column">
                   <button type="submit" class="btn btn-primary">
                     <img
                       src="/icon-arrow.svg"
                       alt="Submit"
                     >
                   </button>
+                  <hr />
                 </div>
-
               </div>
 
             </form>
 
-            <section class="results">
+            <section class="results mt-4">
 
               <ul class="list-unstyled">
                 <li>

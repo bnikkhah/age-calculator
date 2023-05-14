@@ -41,6 +41,7 @@ body {
 
 .result {
     color: $primary;
+    margin-right: 0.5rem;
 }
 
 .form-label {
@@ -52,7 +53,7 @@ body {
 
 .form-control {
     caret-color: $primary;
-    padding: 1rem 1.5rem;
+    padding: 0.75rem 1.5rem;
     font-size: 24px;
 
     &::placeholder {
@@ -80,11 +81,33 @@ body {
 }
 
 .calculator-main {
-    max-width: 700px;
+    min-width: 780px;
     background-color: white;
     margin-right: auto;
     margin-left: auto;
     padding: 3rem;
+    padding-top: 2rem;
     border-radius: 20px;
     border-bottom-right-radius: 180px;
+}
+
+hr {
+    color: $grey;
+    border-width: 2px;
+}
+
+.submit-column {
+    position: relative;
+
+    .btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        z-index: 1;
+    }
+}
+
+.fields-row {
+    max-width: 510px;
 }

@@ -32,12 +32,14 @@
                     <label
                       for="day"
                       class="form-label"
+                      :class="{ 'error' : error }"
                     >
                       Day
                     </label>
                     <input
                       type="number"
                       class="form-control"
+                      :class="{ 'error' : error }"
                       id="day"
                       placeholder="DD"
                       min="1"
@@ -45,18 +47,28 @@
                       name="day"
                       x-model="day"
                     >
+                    <div class="error-messages-wrapper mt-2">
+                      <p
+                        x-show="error"
+                        class="error-message"
+                      >
+                        This field is required
+                      </p>
+                    </div>
                   </div>
   
                   <div class="col">
                     <label
                       for="month"
                       class="form-label"
+                      :class="{ 'error' : error }"
                     >
                       Month
                     </label>
                     <input
                       type="number"
                       class="form-control"
+                      :class="{ 'error' : error }"
                       id="month"
                       placeholder="MM"
                       min="1"
@@ -64,24 +76,42 @@
                       name="month"
                       x-model="month"
                     >
+                    <div class="error-messages-wrapper mt-2">
+                      <p
+                        x-show="error"
+                        class="error-message"
+                      >
+                        This field is required
+                      </p>
+                    </div>
                   </div>
   
                   <div class="col">
                     <label
                       for="year"
                       class="form-label"
+                      :class="{ 'error' : error }"
                     >
                       Year
                     </label>
                     <input
                       type="number"
                       class="form-control"
+                      :class="{ 'error' : error }"
                       id="year"
                       placeholder="YYYY"
                       min="1900"
                       name="year"
                       x-model="year"
                     >
+                    <div class="error-messages-wrapper mt-2">
+                      <p
+                        x-show="error"
+                        class="error-message"
+                      >
+                        This field is required
+                      </p>
+                    </div>
                   </div>
                 </div>
   

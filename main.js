@@ -11,7 +11,17 @@ document.addEventListener("alpine:init", () => {
     calculatedDays: "- -",
     calculatedMonths: "- -",
     calculatedYears: "- -",
-    handleSubmit(e) {
+    error: false,
+    handleSubmit() {
+      if (
+        this.day.length === 0 ||
+        this.month.length === 0 ||
+        this.year.length === 0
+      ) {
+        this.error = true;
+        return;
+      }
+
       const duration = moment.duration(
         moment().diff(`${this.year}-${this.month}-${this.day}`)
       );

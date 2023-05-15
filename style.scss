@@ -61,6 +61,10 @@ body {
     font-size: 18px;
     padding-top: 0.65rem;
     padding-bottom: 0.65rem;
+
+    &.error {
+        border-color: $secondary;
+    }
     
     @include media-breakpoint-up(md) {
         font-size: 24px;
@@ -146,4 +150,14 @@ hr {
 
 .fields-row {
     max-width: 510px;
+}
+
+.error {
+    color: hsl(0, 100%, 67%);
+}
+
+.error-message {
+    font-size: 12px;
+    font-style: italic;
+    color: $secondary;
 }

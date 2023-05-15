@@ -19,117 +19,121 @@
         <div class="row">
           <div class="col-12">
             
-            <form
-              class="inputs"
-              @submit.prevent="handleSubmit"
-            >
+            <div class="calculator-wrapper">
 
-              <div class="row fields-row mb-4">
-
-                <div class="col">
-                  <label
-                    for="day"
-                    class="form-label"
-                  >
-                    Day
-                  </label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="day"
-                    placeholder="DD"
-                    min="1"
-                    max="31"
-                    name="day"
-                    x-model="day"
-                  >
-                </div>
-
-                <div class="col">
-                  <label
-                    for="month"
-                    class="form-label"
-                  >
-                    Month
-                  </label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="month"
-                    placeholder="MM"
-                    min="1"
-                    max="12"
-                    name="month"
-                    x-model="month"
-                  >
-                </div>
-
-                <div class="col">
-                  <label
-                    for="year"
-                    class="form-label"
-                  >
-                    Year
-                  </label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="year"
-                    placeholder="YYYY"
-                    min="1900"
-                    name="year"
-                    x-model="year"
-                  >
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-12 submit-column">
-                  <button type="submit" class="btn btn-primary">
-                    <img
-                      src="/icon-arrow.svg"
-                      alt="Submit"
+              <form
+                class="inputs"
+                @submit.prevent="handleSubmit"
+              >
+  
+                <div class="row fields-row mb-md-4 mb-5">
+  
+                  <div class="col">
+                    <label
+                      for="day"
+                      class="form-label"
                     >
-                  </button>
-                  <hr />
+                      Day
+                    </label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="day"
+                      placeholder="DD"
+                      min="1"
+                      max="31"
+                      name="day"
+                      x-model="day"
+                    >
+                  </div>
+  
+                  <div class="col">
+                    <label
+                      for="month"
+                      class="form-label"
+                    >
+                      Month
+                    </label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="month"
+                      placeholder="MM"
+                      min="1"
+                      max="12"
+                      name="month"
+                      x-model="month"
+                    >
+                  </div>
+  
+                  <div class="col">
+                    <label
+                      for="year"
+                      class="form-label"
+                    >
+                      Year
+                    </label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="year"
+                      placeholder="YYYY"
+                      min="1900"
+                      name="year"
+                      x-model="year"
+                    >
+                  </div>
                 </div>
-              </div>
-
-            </form>
-
-            <section class="results mt-4">
-
-              <ul class="list-unstyled">
-                <li>
-                  <span
-                    id="years"
-                    x-text="calculatedYears"
-                    class="result"
-                  >
-                  --
-                  </span>years
-                </li>
-                <li>
-                  <span
-                    id="months"
-                    x-text="calculatedMonths"
-                    class="result"
-                  >
-                  --
-                  </span>months
-                </li>
-                <li>
-                  <span
-                    id="days"
-                    x-text="calculatedDays"
-                    class="result"
-                  >
-                  --
-                  </span>days
-                </li>
-              </ul>
-
-            </section>
+  
+                <div class="row">
+                  <div class="col-12 submit-column">
+                    <button type="submit" class="btn btn-primary">
+                      <img
+                        src="/icon-arrow.svg"
+                        alt="Submit"
+                      >
+                    </button>
+                    <hr />
+                  </div>
+                </div>
+  
+              </form>
+  
+              <section class="results mt-md-4 mt-5">
+  
+                <ul class="list-unstyled">
+                  <li>
+                    <span
+                      id="years"
+                      x-text="calculatedYears"
+                      class="result"
+                    >
+                    --
+                    </span>years
+                  </li>
+                  <li>
+                    <span
+                      id="months"
+                      x-text="calculatedMonths"
+                      class="result"
+                    >
+                    --
+                    </span>months
+                  </li>
+                  <li>
+                    <span
+                      id="days"
+                      x-text="calculatedDays"
+                      class="result"
+                    >
+                    --
+                    </span>days
+                  </li>
+                </ul>
+  
+              </section>
+              
+            </div>
 
           </div>
         </div>

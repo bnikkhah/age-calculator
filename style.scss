@@ -30,8 +30,13 @@ body {
     border-color: $primary;
     border-radius: 9999px;
     padding: 0;
-    width: 90px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
+    
+    @include media-breakpoint-up(md) {
+        width: 90px;
+        height: 90px;
+    }
 
     &:hover {
         background-color: $black;
@@ -47,18 +52,24 @@ body {
 .form-label {
     color: $grey;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 3px;
 }
 
 .form-control {
     caret-color: $primary;
-    padding: 0.75rem 1.5rem;
-    font-size: 24px;
-
-    &::placeholder {
+    font-size: 18px;
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+    
+    @include media-breakpoint-up(md) {
         font-size: 24px;
+        padding: 0.75rem 1.5rem;
     }
+
+    // &::placeholder {
+    //     font-size: 24px;
+    // }
 
     &:focus {
         box-shadow: none;
@@ -71,24 +82,37 @@ body {
     ul {
 
         li {
-            font-size: 100px;
             font-style: italic;
             font-weight: 700;
             color: $black;
-            line-height: 111px;
+            font-size: 54px;
+            line-height: 60px;
+            
+            @include media-breakpoint-up(md) {
+                line-height: 111px;
+                font-size: 100px;
+            }
         }
     }
 }
 
 .calculator-main {
-    min-width: 780px;
-    background-color: white;
     margin-right: auto;
     margin-left: auto;
-    padding: 3rem;
-    padding-top: 2rem;
-    border-radius: 20px;
-    border-bottom-right-radius: 180px;
+    
+    .calculator-wrapper {
+        border-radius: 20px;
+        background-color: $white;
+        border-bottom-right-radius: 100px;
+        padding: 1.5rem;
+        
+        @include media-breakpoint-up(md) {
+            border-bottom-right-radius: 180px;
+            min-width: 780px;
+            padding: 3rem;
+            padding-top: 2rem;
+        }
+    }
 }
 
 hr {
@@ -102,9 +126,21 @@ hr {
     .btn {
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
-        right: 0;
         z-index: 1;
+        right: 50%;
+        transform: translate(50%, -50%);
+
+        img {
+            
+            @include media-breakpoint-down(sm) {
+                width: 25px;
+            }
+        }
+        
+        @include media-breakpoint-up(md) {
+            right: 0;
+            transform: translateY(-50%);
+        }
     }
 }
 
